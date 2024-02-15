@@ -58,7 +58,7 @@ header {
         }
             .logo {
                 cursor: pointer;
-                background-color: red;
+                background-color: #8B0000;
                 color: white;
                 width: 80px;
                 height: 50px;
@@ -83,13 +83,13 @@ header {
                         transition: .5 ease;
                     }
                         .tabs .active {
-                            color: red;
+                            color: #8B0000;
                             border-bottom-width: 1px;
                             border-bottom-style: solid;
                             transition: .5s ease;
                         }
                         .tab:hover {
-                            color: blue;
+                            color: #ff7b00;
                         }
                 /*section part but need to be in one line so be easy to understand*/
                 [data-tab-content] {
@@ -114,7 +114,7 @@ header {
                         border-bottom-left-radius: 50%;
                         border-bottom-right-radius: 50%;
                         border-width: 1px;
-                        background-color: rgb(255, 123, 0);
+                        background-color: #8B0000;
                         width: 50px;
                         height: 50px;
                         transition: 1s;
@@ -128,6 +128,7 @@ header {
                             border-radius: 50%;
                             background: url(profile-red.png);
                             background-size: cover;
+                            transform: rotate(360deg);
                             background-repeat: no-repeat;
                             background-position: center;
                             transition: 1s;
@@ -135,6 +136,7 @@ header {
                             .waiting {
                                 background: url(loading.gif);
                                 background-size: cover;
+                                transform: rotate(-180deg);
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 transition: 1.5s;
@@ -157,14 +159,14 @@ header {
                             padding-top: 5px;
                             padding-bottom: 5px;
                             padding-left: 2px;
-                            color: black;
-                            background-color: rgb(255, 211, 170);
+                            color: white;
+                            background-color: #f10000;
                             border-width: 2px;
                             transform: translateX(1000px);
                         }
                             .pop-tags:hover {
                                 padding-left: 5px;
-                                background-color: rgb(250, 163, 81);
+                                background-color: #b10000;
                             }
                             .one {
                                 transition: .5s;
@@ -176,7 +178,7 @@ header {
                         .showshit{
                             border-top-style: solid;
                             border-left-style: solid;
-                            border-color: rgb(255, 123, 0);
+                            border-color: #8B0000;
                         }
                         .showshit .pop-tags {
                             transform: translateX(0px);
@@ -217,7 +219,7 @@ section {
             background-color: #013220;
         }
             .lamm {
-                background-color: #012216;
+                background: linear-gradient(90deg, rgba(1,34,22,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(1,34,22,1) 100%);
                 height: 90%;
                 width: 100%;
                 position: absolute;
@@ -275,7 +277,75 @@ section {
                     display: flex;
                         align-items: center;
                 }
-
+/*about sections*/    .view-head-container {
+        min-height: 680px;
+        max-height: 860px;
+        display: flex;
+            align-items: center;
+    }
+        .icons-container {
+            height: 50%;
+            width: 100%;
+            display: flex;
+                justify-content: space-around;
+        }
+            .icon {
+                width: 350px;
+                height: 500px;
+                display: flex;
+                    flex-direction: column;
+            }
+                .icon-logo {
+                    height: 60%;
+                    display: flex;
+                        justify-content: center;
+                        align-items:center;
+                }
+                    .icon-o {
+                        height: 250px;
+                        width: 250px;
+                        border: solid;
+                        border-radius: 50%;
+                    }
+                        .o1 {
+                            background: url(182.gif);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        .o2 {
+                            background: url(183.gif);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        .o3 {
+                            background: url(184.gif);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                
+                .icon-details {
+                    height: 40%;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                }
+                    .icon-details-head {
+                        height: 30%;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        font-size: 50px;
+                        text-align: center;
+                        border-bottom: solid 3px;
+                    }
+                    .icon-details-body {
+                        height: 70%;
+                        width: 80%;
+                        text-align: center;
+                    }
     .section-container {
         max-width: 1260px;
         width: 100%;
@@ -289,6 +359,16 @@ section {
             color: white;
             height: 100%;
         }
+/*testing purposes*/
+    .t1 {
+        background-color: red;
+    }
+    .t2 {
+        background-color: blue;
+    }
+    .t3 {
+        background-color: green;
+    }
     @media  only screen and (min-width: 601px) and (max-width: 900px) {
         .img-grid-las {
             display: grid;
