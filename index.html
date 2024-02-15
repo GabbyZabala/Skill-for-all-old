@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/index.css">
+    <script src="files/index.js" defer></script>
+    <title>basta title</title>
+    <style>
+    </style>
+</head>
+<body>
+    <header class="center">
+        <div class="head-container center">
+            <div class="bless">
+                <div class="logo center-in" onclick="returnToHome()">
+                    logo
+                </div>
+                <div class="tabs-container center-in">
+                    <div class="tabs">
+                        <li data-tab-target="#home" class="tab active">HOME</li>
+                        <li data-tab-target="#about" class="tab">ABOUT</li>
+                        <li data-tab-target="#val" class="tab">VIEW ALL LESSON</li>
+                    </div>
+                    <div class="account-container">
+                        <div class="account" onclick="toggleDropdown()" id="account-line">
+                            <div class="account-img" id="profile-pic">&#160;</div>
+                        </div>
+                        <div class="account-pop_up" id="dropdown">
+                            <li data-tab-target="#account"s class="pop-tags one" onclick="toggleDropdown()">VIEW-PROFILE</li>
+                            <li data-tab-target="#locky" class="pop-tags two"onclick="toggleDropdown()">SIGN-IN</li>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <section data-tab-content id="home" class="active"> <!--HOOME-->
+        <div class="contents-divider">
+            <div class="home-head-container capsule">
+                <h1>HTML TUTORIALS AND STUFF</h1>
+                <h4>Everything HTML, CSS, and Javascript the most common language used in making webpages</h4>
+            </div>
+            <div class="other-shit capsule">
+                Filler
+            </div>
+        </div>
+    </section>
+    <section data-tab-content id="about" ><!--ABOUT-->
+        <div class="lamm">..</div>
+        <div class="contents-divider ">
+            <div class="about-head-container capsule">
+                <div class="about-body-container">
+                    <div class="pic-container">
+                        <div class="img-grid-las about-in-body">
+                            <div class="img1 center-in">image 1</div>
+                            <div class="fil1">.</div>
+                            <div class="img2 center-in">image 2</div>
+                            <div class="fil2">.</div>
+                        </div>
+                    </div>
+                    <div class="about-knowtwo">
+                        <div class="about-text-container">
+                            <h1>SKILL SHARE</h1>
+                            <h6>This website will help you</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-tab-content id="val" ><!--VIEW ALL LESSON-->
+        <div class="contents-divider">
+            <div class="section-container capsule center">
+                view shit
+            </div>
+        </div>
+    </section>
+    <section data-tab-content id="account" ><!--ACOUNT-->
+        <div class="contents-divider">
+            <div class="section-container capsule center">
+                haccount
+            </div>
+        </div>
+    </section>
+    <section data-tab-content id="locky" ><!--sing-in-->
+        <div class="contents-divider">
+            <div class="section-container capsule center">
+                singin mf
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,303 @@
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/*scroll mods*/  
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: beige;
+    display: flex;
+        flex-direction: column;
+        gap: 5px;
+}
+.center {
+    display: flex;
+        align-content: center;
+        justify-content: center;
+}
+.center-in {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+header {
+    height: 75px;
+    position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 2;
+}
+    .head-container {
+        height: 75px;
+        max-width: 1260px;
+        width: 100%;
+    }
+        .bless {
+            width: 100%;
+            display: flex;
+                align-items: center;
+                justify-content: space-between;
+        }
+            .logo {
+                cursor: pointer;
+                background-color: red;
+                color: white;
+                width: 80px;
+                height: 50px;
+            }
+            .tabs-container {
+                width: 400px;
+                height: 50px;
+                display: flex;
+                    gap: 10px;
+            }
+                .tabs {
+                    list-style-type: none;
+                    width: 90%;
+                    display: flex;
+                        justify-content: space-between;
+                        gap: 2px;
+                }
+                    .tab {
+                        cursor: pointer;
+                        color: black;
+                        padding: 5px;
+                        transition: .5 ease;
+                    }
+                        .tabs .active {
+                            color: red;
+                            border-bottom-width: 1px;
+                            border-bottom-style: solid;
+                            transition: .5s ease;
+                        }
+                        .tab:hover {
+                            color: blue;
+                        }
+                /*section part but need to be in one line so be easy to understand*/
+                [data-tab-content] {
+                    display: none;
+                }
+                .active[data-tab-content] {
+                    display: block;
+                }
+                .account-container {
+                    width: 65px;
+                    position: relative;
+                    /*top: 50%;*/
+                    display: flex;
+                    gap: 2px;
+                            flex-direction: column;
+                    transition: 3s;
+                }
+                    .account {
+                        cursor: pointer;
+                        border-top-left-radius: 50%;
+                        border-top-right-radius: 50%;
+                        border-bottom-left-radius: 50%;
+                        border-bottom-right-radius: 50%;
+                        border-width: 1px;
+                        background-color: rgb(255, 123, 0);
+                        width: 50px;
+                        height: 50px;
+                        transition: 1s;
+                        display: flex;
+                            justify-content: center;
+                            align-items: center;
+                    }
+                        .account-img {
+                            width: 90%;
+                            height: 90%;
+                            border-radius: 50%;
+                            background: url(profile-red.png);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            transition: 1s;
+                        }
+                            .waiting {
+                                background: url(loading.gif);
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                transition: 1.5s;
+                            }
+                    .account-pop_up {
+                            transition: .5s;
+                            cursor: pointer;
+                            display: block;
+                            position: absolute;
+                            width: 130px;
+                            list-style-type: none;
+                            top: 48px;
+                            left: -150%;
+                            overflow: hidden;
+                            border-top-style: solid;
+                            border-left-style: solid;
+                            border-color: transparent;
+                        }
+                        .pop-tags {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            padding-left: 2px;
+                            color: black;
+                            background-color: rgb(255, 211, 170);
+                            border-width: 2px;
+                            transform: translateX(1000px);
+                        }
+                            .pop-tags:hover {
+                                padding-left: 5px;
+                                background-color: rgb(250, 163, 81);
+                            }
+                            .one {
+                                transition: .5s;
+                            }
+                            .two {
+                                transition: 1s;
+                            }
+                        /* Show the dropdown when hovering over the account container */
+                        .showshit{
+                            border-top-style: solid;
+                            border-left-style: solid;
+                            border-color: rgb(255, 123, 0);
+                        }
+                        .showshit .pop-tags {
+                            transform: translateX(0px);
+                        }
+                        .bline {
+                            transition: .5s;
+                            border-top-left-radius: 50%;
+                            border-top-right-radius: 50%;
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 50%;
+                        }
+section {   
+    min-height: 660px;
+    height: 100%;
+    position: relative;
+}
+    .contents-divider {
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+    .capsule {
+        max-width: 1260px;
+        width: 100%;
+    }
+/*home sections*/        .home-head-container {
+            min-height: 660px;
+            max-height: 860px;
+            height: 100%;
+            display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        }
+/*about sections*/       .about-head-container {
+            min-height: 680px;
+            max-height: 860px;
+            background-color: #013220;
+        }
+            .lamm {
+                background-color: #012216;
+                height: 90%;
+                width: 100%;
+                position: absolute;
+                    top: 5%;
+                    z-index: -5;
+            }
+            .about-body-container {
+                Min-height:660px; 
+                display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 100%;
+                    grid-template-areas: "a-left a-right";
+            }
+                .pic-container {
+                    grid-area: a-left;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+                    .about-in-body {
+                        width: 90%;
+                        height: 70%;
+                    }
+                    .img-grid-las {
+                        display: grid;
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr;
+                            gap: 1%;
+                            grid-template-areas: 
+                            "img1 img1 fil1 fill1"
+                            "img1 img1 img2 img2"
+                            "img1 img1 img2 img2"
+                            "fil2 fil2 img2 img2";
+                    }
+                        .img1 {
+                            grid-area: img1;
+                            background-color: beige;
+                        }
+                        .img2 {
+                            grid-area: img2;
+                            background-color: beige;
+                        }
+                        .fil1 {
+                            grid-area: fil1;
+                        }
+                        .fil2 {
+                            grid-area: fil2;
+                        }
+                .about-knowtwo {
+                    grid-area: a-right;
+                    background: url();
+                    background-repeat: no-repeat;
+                    background-position:center;
+                    color: white;
+                    display: flex;
+                        align-items: center;
+                }
+
+    .section-container {
+        max-width: 1260px;
+        width: 100%;
+    }  
+        .about {
+            background-color: #013220;
+            color: white;
+        }
+        .other-shit {
+            background-color: black;
+            color: white;
+            height: 100%;
+        }
+    @media  only screen and (min-width: 601px) and (max-width: 900px) {
+        .img-grid-las {
+            display: grid;
+                grid-template-columns: 25% 50% 25%;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                gap: 1%;
+                grid-template-areas: 
+                "img1 img1 fil1 fill1"
+                "img1 img1 img2 img2"
+                "fil2 fil2 img2 img2";
+        }
+    }
