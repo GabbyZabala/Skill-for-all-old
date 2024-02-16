@@ -41,3 +41,42 @@ function toggleDropdown() {
     accountLine.classList.toggle("bline");
     profilePic.classList.toggle("waiting");
 }
+
+const vicon = document.querySelectorAll('[data-view-protocol]');
+const vselected = document.querySelectorAll('[data-view-selected]');
+
+function viewChoice(view) {
+    const target = document.querySelector(view.dataset.viewProtocol);
+    vselected.forEach(selected => {
+        selected.classList.remove('active');
+    });
+    vicon.forEach(icon => {
+        icon.classList.remove('active-icon');
+    });
+    view.classList.add('active-icon');
+    target.classList.add('active');
+}
+
+vicon.forEach(view => {
+    view.addEventListener('click', () => viewChoice(view));
+});
+
+function theVaxIcon() {
+    var iCD = document.getElementById("icon-cd");
+    iCD.classList.toggle("Vax");
+    iCD.classList.remove("Vee");
+    iCD.classList.remove("Val");
+}
+function theVeeIcon() {
+    var iCD = document.getElementById("icon-cd");
+    iCD.classList.remove("Vax");
+    iCD.classList.toggle("Vee");
+    iCD.classList.remove("Val");
+}
+function theValIcon() {
+    var iCD = document.getElementById("icon-cd");
+    iCD.classList.remove("Vax");
+    iCD.classList.remove("Vee");
+    iCD.classList.toggle("Val");
+    
+}

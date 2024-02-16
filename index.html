@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="files/index.css">
+    <link rel="icon" href="files/skill-for-all.ico">
     <script src="files/index.js" defer></script>
-    <title>basta title</title>
+    <title>SKILL FOR ALL</title>
     <style>
     </style>
 </head>
@@ -13,9 +14,7 @@
     <header class="center">
         <div class="head-container center">
             <div class="bless">
-                <div class="logo center-in" onclick="returnToHome()">
-                    logo
-                </div>
+                <div class="logo center-in" onclick="returnToHome()"></div>
                 <div class="tabs-container center-in">
                     <div class="tabs">
                         <li data-tab-target="#home" class="tab active">HOME</li>
@@ -75,8 +74,8 @@
     <section data-tab-content id="val" ><!--VIEW ALL LESSON-->
         <div class="contents-divider">
             <div class="view-head-container capsule ">
-                <div class="icons-container">
-                    <div class="icon">
+                <div class="icons-container" id="icon-cd">
+                    <div data-view-protocol="#Tutorial" class="icon icon1" onclick="theVaxIcon()">
                         <div class="icon-logo">
                             <div class="icon-o o1"></div>
                         </div>
@@ -89,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="icon">
+                    <div data-view-protocol="#Technique" class="icon icon2" onclick="theVeeIcon()">
                         <div class="icon-logo">
                             <div class="icon-o o2"></div>
                         </div>
@@ -102,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="icon">
+                    <div data-view-protocol="#example" class="icon icon3" onclick="theValIcon()">
                         <div class="icon-logo">
                             <div class="icon-o o3"></div>
                         </div>
@@ -114,6 +113,17 @@
                                 <h4>Intruction bone-bone example demonstrating code in actions</h4>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="view-choice-container">
+                    <div data-view-selected id="Tutorial" class="view-selected">
+                        lalala
+                    </div>
+                    <div data-view-selected id="Technique" class="view-selected">
+                        laaal
+                    </div>
+                    <div data-view-selected id="example" class="view-selected">
+                        la
                     </div>
                 </div>
             </div>
