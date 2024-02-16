@@ -281,17 +281,26 @@ section {
                         align-items: center;
                 }
 /*about sections*/    .view-head-container {
-        min-height: 680px;
-        max-height: 860px;
-        display: flex;
-            align-items: center;
+        padding-top: 100px;
+        transition: 1s;   
     }
+        .view-center-design {
+            transition: 2s;
+            display: flex;
+                justify-content: center;
+                align-items: center; 
+        }
+            .view-design {
+                transition: 2s;
+                display: flex;
+            }
         .icons-container {
-            height: 50%;
-            width: 100%;
             display: flex;
                 justify-content: space-around;
         }
+            .ico-wid {
+                width: 100%;
+            }
             .icon {
                 width: 350px;
                 height: 500px;
@@ -311,23 +320,41 @@ section {
                         border-radius: 50%;
                     }
                         .o1 {
-                            background: url(182.gif);
+                            background: url(182-steady.png);
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: cover;
                         }
+                            .o1:hover {
+                                background: url(182.gif);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: cover;
+                            }
                         .o2 {
-                            background: url(183.gif);
+                            background: url(183-steady.png);
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: cover;
                         }
+                            .o2:hover {
+                                background: url(183.gif);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: cover;
+                            }
                         .o3 {
-                            background: url(184.gif);
+                            background: url(184-steady.png);
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: cover;
                         }
+                            .o3:hover {
+                                background: url(184.gif);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: cover;
+                            }
                 
                 .icon-details {
                     height: 40%;
@@ -349,31 +376,84 @@ section {
                         width: 80%;
                         text-align: center;
                     }
-                .active-icon {
-                    display: flex;
-                        flex-direction: column-reverse;
+                .active-icon  .icon-logo    {
+                    animation: vibrate-2 1s linear infinite both;
                 }
-                    .active-icon .icon {
-                        background-color: orange;
+                        .active-icon .icon .icon-logo .o1 {
+                            background: url(182.gif);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        .active-icon .icon .icon-logo .o2 {
+                            background: url(183.gif);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        .active-icon .icon .icon-logo .o3 {
+                            background: url(184.gif);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                .Vax .icon2, .Vax .icon3, .Vax .icon .icon-details {
+                    display: none;
+                }
+                    .Vax .icon .icon-logo .o1 {
+                        background: url(182.gif);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
                     }
-                .Vax .icon2, .Vax .icon3 {
+                        .Vax .icon .icon-logo {
+                            background-color: #013220;
+                            border-top-left-radius: 50px;
+                            border-bottom-left-radius: 50px;
+                        }
+                .Vee .icon1, .Vee .icon3, .Vee .icon .icon-details {
                     display: none;
                 }
-                .Vee .icon1, .Vee .icon3 {
+                    .Vee .icon .icon-logo .o2 {
+                        background: url(183.gif);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                        .Vee .icon .icon-logo {
+                            background-color: #013220;
+                            border-top-left-radius: 50px;
+                            border-bottom-left-radius: 50px;
+                        }
+                .Val .icon2, .Val .icon1, .Val .icon .icon-details {
                     display: none;
                 }
-                .Val .icon2, .Val .icon1 {
-                    display: none;
-                }
+                    .Val .icon .icon-logo .o3 {
+                        background: url(184.gif);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                        .Val .icon .icon-logo {
+                            background-color: #013220;
+                            border-top-left-radius: 50px;
+                            border-bottom-left-radius: 50px;
+                        }
         .view-choice-container {
-            background-color: #555;
+            background-color: #013220;
+            width: 100%;
+            transform: translatex(-5%);
         }
+            .pannyseen{
+                display: none;
+            }
             [data-view-selected] {
                 display: none;
             }
             .active[data-view-selected] {
                 display: block;
             }
+                
     .section-container {
         max-width: 1260px;
         width: 100%;
