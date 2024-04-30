@@ -152,7 +152,7 @@ header {
                             list-style-type: none;
                             top: 48px;
                             left: -150%;
-                            overflow: hidden;
+                            overflow: visible;
                             border-top-style: solid;
                             border-left-style: solid;
                             border-color: transparent;
